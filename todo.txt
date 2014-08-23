@@ -1,0 +1,6 @@
+Problems 3, 41, 46, 50:
+* Improve prime number search algorithm
+* Move common functions to package "Common"
+
+Problem 5:
+* Create function to automaticaly get all possible factors
