@@ -1,35 +1,14 @@
 #!/usr/bin/env python
 from time import time
-from math import sqrt
-
-
-def is_prime_preseed(n, prime_numbers):
-    for i in prime_numbers:
-        if n % i == 0:
-            return False
-        if n < i**2 - 1:
-            return True
-    return True
-
-
-def gen_missing_prime(n, prime_numbers):
-    for i in range(prime_numbers[-1], n + 1, 2):
-        if is_prime_preseed(i, prime_numbers):
-            prime_numbers.append(i)
-
-
-def is_prime(n, prime_numbers):
-    if n < 2:
-        return False
-    if n > prime_numbers[-1]**2:
-        gen_missing_prime(int(sqrt(n)), prime_numbers)
-    return is_prime_preseed(n, prime_numbers)
+from sys import path
+path.append('../Common')
+from prime import is_prime, prime_numbers
 
 
 def prime_factors(n):
     res = []
-    prime_numbers = [2, 3]
-    if is_prime(n, prime_numbers):
+    global prime_numbers
+    if is_prime(n):
         return [n]
     for i in prime_numbers:
         if n == 1:
