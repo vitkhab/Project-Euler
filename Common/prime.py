@@ -46,6 +46,20 @@ def get_prime(num):
     return prime_numbers[num - 1]
 
 
+def factorize(num):
+    global prime_numbers
+    factors = []
+    if num <= 1:
+        return []
+    if is_prime(num):
+        return [num]
+    for n in prime_numbers:
+        if num % n == 0:
+            factors = [n] + factorize(num / n)
+            break
+    return factors
+
+
 def test_module():
     assert is_prime(2) == True
     assert is_prime(4) == False
