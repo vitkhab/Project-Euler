@@ -1,9 +1,21 @@
 Problems 3, 41, 46, 50:
-* Improve prime number search algorithm
-* Move common functions to package "Common"
+ * Improve prime number search algorithm
+ * Move common functions to package "Common"
 
 Problem 5:
-* Create function to automaticaly get all possible factors
+ * Create function to automatically get all possible factors
+
+Problem 12, 21:
+ * Rewrite make_divisors functions
+
+Problem 15:
+ * Understand how the program works (I wrote algorithm on paper, then coded it and after I saw a difference)
 
 Problem 17:
-* Rewrite number to words constructor
+ * Rewrite number to words constructor
+
+Problem 23:
+ * Find faster solution
+
+Problem 28:
+ * Finish project design
